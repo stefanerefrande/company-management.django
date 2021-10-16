@@ -37,4 +37,4 @@ The application´s endpoints can also be accessed through Postman, [as is shown 
 ![company_list](https://github.com/stefanerefrande/company-management.django/blob/main/CompanyManagement/readme_images/Captura%20de%20Tela%202021-10-15%20%C3%A0s%2019.09.26.png?raw=true)
 
 # Heroku
-CLick here to check the application deployed at Heroku´s platform.
+[CLick here to check the application deployed at Heroku´s platform.](https://company-management-django-app.herokuapp.com/)
