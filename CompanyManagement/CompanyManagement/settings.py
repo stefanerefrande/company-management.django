@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-)hd!yojj8uv)emya+&ki7saou3b2ov@kl1=n*6myrb@eyjgv+u'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -39,13 +39,13 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'corsheaders',
-    'CompanyApp.app.CompanyappConfig'
+    'CompanyApp'
 ]
 
 CORS_ORIGIN_ALLOW_ALL = True
 
 MIDDLEWARE = [
-    'corsheaders.middleware.CorsMiddleware'
+    #'corsheaders.middleware.CorsMiddleware'
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -73,7 +73,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'CompanyManagement.wsgi.application'
+#WSGI_APPLICATION = 'CompanyManagement.wsgi.application'
 
 
 # Database
@@ -81,8 +81,12 @@ WSGI_APPLICATION = 'CompanyManagement.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'company.database',
+        'USER': 'stefane',
+        'PASSWORD': 'Qualqueruma#20',
+        'HOST': 'localhost',
+        'PORT': '5432'
     }
 }
 
